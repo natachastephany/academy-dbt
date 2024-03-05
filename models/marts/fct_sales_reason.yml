@@ -1,0 +1,26 @@
+version: 2
+
+models:
+    - name: fct_sales_Reason
+      description: Sales reason fact table.
+      columns:
+        - name: sales_reason_fk
+          description: Sales reason foreign key.
+
+        - name: sales_order_id
+          description: Sales order identification number.
+
+        - name: sales_reason_id
+          description: Sales reason identification number.
+
+        - name: sales_reason_id
+          description: The sales reason
+ 
+        - name: reason_type
+          description: The sales reason type
+
+        - name: order_qty
+          description: The order quantity per sales reason.
+
+        - name: sum_price
+          description: The due amount per sale reason.

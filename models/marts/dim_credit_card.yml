@@ -1,0 +1,22 @@
+version: 2
+
+models:
+    - name: dim_credit_card
+      description: Dimension with credit card operations
+      columns:
+        - name: credit_card_sk
+          description: Credit card table surrogate key
+          tests:
+            - unique
+            - not_null
+
+        - name: credit_card_id
+          description: Credit card table unique key
+          tests:
+            - unique
+            - not_null
+
+        - name: card_type
+          description: The credit card type
+          tests:
+            - not_null

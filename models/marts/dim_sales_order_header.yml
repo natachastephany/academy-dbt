@@ -1,0 +1,38 @@
+version: 2
+
+models:
+    - name: dim_sales_order_header
+      description: Dimension with order informations.
+      columns:
+        - name: sales_order_sk
+          description: Sales order table surrogate key
+          tests:
+            - unique
+            - not_null
+
+        - name: sales_order_id
+          description: Sales order table primary key
+          tests:
+            - unique
+            - not_null
+
+        - name: order_date
+          description: Dates the sales order was created
+
+        - name: status
+          description: Order current status -> 1 = In Process; 2 = Approved; 3 = Backordered; 4 = Rejected; 5 = Shipped; 6 = Cancelled
+
+        - name: customer_id
+          description: Customer identification number. 
+
+        - name: sales_person_id
+          description: sales person who created the sales order.
+
+        - name: territory_id 
+          description: Territory identification number.
+
+        - name: credit_card_id
+          description: Credit card identification number.
+
+        - name: total_due
+          description: Total due from customer.

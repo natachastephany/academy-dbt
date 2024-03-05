@@ -1,0 +1,56 @@
+version: 2
+
+models:
+    - name: dim_employee
+      description: Dimension with employee informations
+      columns:
+        - name: seller_id
+          description: Primary key for all customers, vendors, and employees.
+          tests:
+            - not_null
+
+        - name: full_name
+          description: Name of the person.
+          tests:
+            - not_null
+            - unique
+
+        - name: jobtitle
+          description: Work title such as Buyer or Sales Representative.
+          tests:
+            - not_null
+
+        - name: hiredate
+          description: Employee hired on this date.
+
+        - name: territoryid
+          description:	Primary key for SalesTerritory records.
+      
+        - name: territory_name
+          description: Sales territory description.
+          
+        - name: countryregioncode
+          description: ISO standard code for countries and regions.
+
+        - name: territory_group
+          description: Geographic area to which the sales territory belong.
+
+        - name: salesquota
+          description: Projected yearly sales.
+            
+        - name: bonus
+          description: Bonus due if quota is met.
+
+        - name: commissionpct
+          description: Commision percent received per sale.
+
+        - name: salesytd
+          description: Sales total year to date.
+
+        - name: saleslastyear
+          description: Sales total of previous year.
+
+        
+
+        
+        

@@ -1,0 +1,23 @@
+version: 2
+
+models:
+    - name: dim_products
+      description: Dimension with products informations
+      columns:
+        - name: product_sk
+          description: Product table surrogate key
+          tests:
+            - unique
+            - not_null
+
+        - name: product_id
+          description: Product table unique key
+          tests:
+            - unique
+            - not_null
+
+        - name: product_name
+          description: The product's name
+
+        - name: average_ticket
+          description: Average ticket per product

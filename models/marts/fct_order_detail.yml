@@ -1,0 +1,48 @@
+version: 2
+
+models:
+    - name: fct_order_detail
+      description: Order detail fact table
+      columns:
+        - name: territory_fk
+          description: Territory table foreign key.
+
+        - name: sales_order_fk
+          description: Sales order header table foreign key.
+
+        - name: seller_id
+          description: Id of who made the sale.
+
+
+        - name: product_fk
+          description: Product table foreign key.
+
+        - name: sales_order_detail_id
+          description: Sales order detail identification number.
+
+        - name: sales_order_id
+          description: Sales order identification number.
+          
+        - name: product_id
+          description: Product identification number.
+
+        - name: customer_id
+          description: Customer identification number.
+
+        - name: territory_id
+          description: Territory identification number.
+
+        - name: order_qty
+          description: The order quantity.
+
+        - name: unit_price
+          description: The unit price.
+
+        - name: sub_total
+          description: The sub total (total without taxes and freight).
+
+        - name: order_date
+          description: The order date.
+
+        - name: full_address
+          description: The customer full address.

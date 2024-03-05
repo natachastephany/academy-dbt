@@ -1,0 +1,26 @@
+version: 2
+
+models:
+    - name: agg_sales_region_seller
+      description: Agregate table with sales by region and seller.
+      columns:
+        - name: territory_name
+          description: Sales territory description.
+
+        - name: full_name
+          description: Name of the person.
+          tests:
+            - not_null
+            - unique
+
+        - name: total_orders
+          description: Number orders made.
+          tests:
+            - not_null
+
+        - name: total_sales_value
+          description: Sum of the total sales by territory and seller.
+          tests:
+            - not_null
+
+

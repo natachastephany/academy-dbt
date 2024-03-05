@@ -1,0 +1,28 @@
+version: 2
+
+models:
+    - name: dim_sales_reason
+      description: Dimension with the sales reason.
+      columns:
+        - name: sales_reason_sk
+          description: Sales reason table surrogate key.
+          tests:
+            - unique
+            - not_null
+
+        - name: sales_order_id
+          description: Sales order identifier.
+          tests:
+            - not_null
+
+        - name: sales_reason_id
+          description: Reason for sale identifier.
+
+        - name: reason_name
+          description: Reason for sale.
+
+        - name: reason_type
+          description: The type of reason for sale.
+
+        - name: total_due
+          description: Total due per sales reason
