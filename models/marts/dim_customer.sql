@@ -9,6 +9,7 @@ with
             , middle_name
             , last_name
             , full_name
+            , store_id
         from {{ ref('int_customer') }}
     )
 select *

@@ -36,3 +36,6 @@ models:
 
         - name: full_name
           description: Full name of the person
+
+        - name: store_id
+          description: Id of each store.
