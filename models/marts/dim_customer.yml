@@ -1,0 +1,41 @@
+version: 2
+
+models:
+    - name: dim_customer
+      description: Dimension with customer informations
+      columns:
+        - name: customer_sk
+          description: Customer table surrogate key
+          tests:
+            - unique
+            - not_null
+
+        - name: customer_id
+          description: Customer table unique key
+          tests:
+            - not_null
+            - unique
+
+        - name: person_id
+          description: Foreign key to persons table (businessentityid)
+          tests:
+            - not_null
+            - unique
+
+        - name: persontype
+          description: Type of person -> SC = Store Contact; IN = Individual customer; SP = Sales Person; EM = Employee (non-sales); VC = Vendor Contact; GC = General Contact
+
+        - name: first_name
+          description: First name of the person
+      
+        - name: middle_name
+          description: Middle name of the person      
+          
+        - name: last_name
+          description: Last name of the person
+
+        - name: full_name
+          description: Full name of the person
+
+        - name: store_id
+          description: Id of each store.

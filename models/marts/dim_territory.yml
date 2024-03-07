@@ -1,0 +1,35 @@
+version: 2
+
+models:
+    - name: dim_territory
+      description: Dimension with the territory informations
+      columns:
+        - name: territory_sk
+          description: Territory table surrogate key.
+          tests:
+            - unique
+            - not_null
+
+        - name: customer_id
+          description: Territory table surrogate key.
+          tests:
+            - unique
+            - not_null
+
+        - name: address_id
+          description: Address identification number
+
+        - name: city
+          description: City where the customer lives
+
+        - name: country_region_code
+          description: Region code. 
+
+        - name: country_region_name
+          description: The region name where the customer lives
+
+        - name: state_province_id
+          description: State province identification number
+          
+        - name: province_name 
+          description: State province where the customer lives

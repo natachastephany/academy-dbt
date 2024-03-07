@@ -1,0 +1,53 @@
+version: 2
+
+sources:
+  - name: stg_adventure_works
+    schema: sap_adw
+    description: Preprocessed data, defined according to the Modeling Diagram for the creation of Fact and Dimension tables.
+    tables: 
+      - name: address
+        description: Table with the address, city and state province identification number.
+
+      - name: businessentityaddress
+        description: Table linking the person to their respective address.
+      
+      - name: countryregion
+        description: Person country region, linking with the country region code in the person_stateprovince table.
+
+      - name: creditcard
+        description: The table which contain informations about the credit cards, like creditcardid and cardtype.
+      
+      - name: customer
+        description: Table with the customer id and the person id (businessentityid), that associates the customer with other information about the customer.
+
+      - name: person
+        description: Table with the person identification number, full name and person type.
+
+      - name: product
+        description: Table with the products identification number and informations.
+
+      - name: salesorderdetail
+        description: Table with the details about each order, like which products contains, the quantity, unit price, etc.
+
+      - name: salesorderheader
+        description: The order header table, each line represent one group of information about a sales order, like the customer associated with the order, the total due, etc.
+
+      - name: salesorderheadersalesreason
+        description: Table which contain the conection between sales order header and the sales reason table.
+
+      - name: salesreason
+        description: The table which contains the sales reason.
+
+      - name: stateprovince
+        description: Person state province, linking with the state province identification number in the person_address table.
+
+      - name: salesterritory
+        description: Table with the address regarding the territory itself.
+
+      - name: salesperson
+        description: Table with the data of who made the sales.
+
+      - name: employee
+        description: Table with the data of all the employees.
+
+

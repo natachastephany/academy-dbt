@@ -1,0 +1,41 @@
+version: 2
+
+models:
+    - name: fct_order_header
+      description: Sales order header fact table
+      columns:
+        - name: territory_fk
+          description: Territory table foreign key.
+
+        - name: sales_person_id
+          description: Who made de sale.
+
+        - name: customer_fk
+          description: Customer table foreign key.
+
+        - name: credit_card_fk
+          description: Credit card table foreign key.
+
+        - name: sales_order_id
+          description: Sales order identification number.
+
+        - name: customer_id
+          description: Customer identification number.
+
+        - name: territory_id
+          description: Territory identification number.
+
+        - name: credit_card_id
+          description: Credit card identification number.
+
+        - name: order_date
+          description: The order date.
+
+        - name: total_due
+          description: The total due (sub_total + taxes + freight)
+
+        - name: status
+          description: The status order (1 - In process; 2 - Approved; 3 - Backordered; 4 - Rejected; 5 - Shipped; 6 - Cancelled)
+          
+        - name: full_address
+          description: The customer full address
